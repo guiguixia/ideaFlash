@@ -3,218 +3,253 @@
 
 <head>
 <meta charset="UTF-8">
-<title>ideaFlash</title>
+<title>ideaFlash - Turn Every Idea Into Reality</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 
 body{
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
-margin:0;
-background:#fafafa;
-color:#222;
-line-height:1.6;
+    font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto;
+    margin:0;
+    background:#fafafa;
+    color:#222;
 }
 
 .container{
-max-width:900px;
-margin:auto;
-padding:60px 20px;
-}
-
-.lang-switch{
-position:fixed;
-top:20px;
-right:30px;
-}
-
-button{
-padding:6px 12px;
-margin-left:5px;
-cursor:pointer;
-}
-
-h1{
-font-size:40px;
+    max-width:1000px;
+    margin:auto;
+    padding:40px 20px;
 }
 
 .hero{
-text-align:center;
-margin-bottom:50px;
+    text-align:center;
+    padding:80px 0 40px 0;
+}
+
+h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:#666;
+    font-size:18px;
 }
 
 .section{
-margin-top:50px;
+    margin-top:70px;
+}
+
+.section h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.description{
+    text-align:center;
+    color:#666;
+    max-width:700px;
+    margin:auto;
+}
+
+.features{
+    margin-top:40px;
+}
+
+.feature{
+    margin-bottom:25px;
+}
+
+.screenshots{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:30px;
+}
+
+.screenshots img{
+    width:100%;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.pricing{
+    margin-top:40px;
+}
+
+.card{
+    border:1px solid #eee;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:20px;
+    background:white;
+}
+
+footer{
+    margin-top:80px;
+    padding:30px 0;
+    border-top:1px solid #eee;
+    text-align:center;
+    font-size:14px;
+    color:#777;
+}
+
+footer a{
+    margin:0 10px;
+    text-decoration:none;
+    color:#444;
 }
 
 </style>
 
-<script>
-
-function switchLang(lang){
-
-document.querySelectorAll("[data-lang]").forEach(el=>{
-
-if(el.dataset.lang === lang){
-el.style.display="block"
-}else{
-el.style.display="none"
-}
-
-})
-
-}
-
-window.onload=function(){
-switchLang("en")
-}
-
-</script>
-
 </head>
-
 
 <body>
 
-<div class="lang-switch">
-<button onclick="switchLang('en')">EN</button>
-<button onclick="switchLang('zh')">中文</button>
-</div>
-
-
 <div class="container">
+
+
+<!-- HERO -->
 
 <div class="hero">
 
 <h1>ideaFlash</h1>
 
-<p data-lang="en">
-Turn every idea into reality
+<p class="subtitle">
+Turn every idea into reality with your personal AI avatar
 </p>
 
-<p data-lang="zh">
-让每个 idea 成为现实
-</p>
-
-</div>
-
-
-<div class="section">
-
-<h2 data-lang="en">What is ideaFlash</h2>
-<h2 data-lang="zh">产品介绍</h2>
-
-<p data-lang="en">
-ideaFlash is an AI-native product designed around personal context.
-Your notes, ideas, learning records and thoughts gradually build a personal context library that evolves over time.
-</p>
-
-<p data-lang="zh">
-ideaFlash 是一款围绕个性化 context 构建的 AI 原生产品。
-用户的笔记、灵感、学习记录和思考会逐渐沉淀为一个不断成长的个性化 context 库。
+<p class="subtitle">
+Early Beta
 </p>
 
 </div>
 
 
-<div class="section">
 
-<h2 data-lang="en">Personal Context</h2>
-<h2 data-lang="zh">个性化 Context</h2>
+<!-- PRODUCT INTRO -->
 
-<p data-lang="en">
-Each user owns a personal context library built from notes, interactions and knowledge.
-This context continuously evolves through filtering, learning and reinforcement.
+<section class="section">
+
+<h2>What is ideaFlash</h2>
+
+<p class="description">
+
+ideaFlash is an AI-native product that builds your personal AI avatar
+from your notes and personalized context.
+
+Your notes, ideas, and knowledge become training material for your
+AI twin that can think, create, and work in the digital world.
+
 </p>
 
-<p data-lang="zh">
-每个用户都会拥有一个属于自己的 context 库。
-这些内容来自笔记、用户与 AI 的交互以及长期积累的知识，并通过强化学习不断优化。
+</section>
+
+
+
+<!-- PRODUCT SCREENSHOTS -->
+
+<section class="section">
+
+<h2>Product Preview</h2>
+
+<p class="description">
+A preview of the ideaFlash interface and core features
 </p>
 
-</div>
+<div class="screenshots">
 
+<img src="images/note_01.png" alt="ideaFlash notes interface">
 
-<div class="section">
+<img src="images/note_02.png" alt="ideaFlash note management">
 
-<h2 data-lang="en">AI Avatar</h2>
-<h2 data-lang="zh">AI 分身</h2>
-
-<p data-lang="en">
-Your AI avatar is your digital twin.
-It understands your background, preferences and long-term goals, and can help you complete digital tasks.
-</p>
-
-<p data-lang="zh">
-AI 分身是用户在数字世界的第二个自己。
-它能够理解用户的背景、偏好和目标，并帮助完成各种数字世界的工作。
-</p>
+<img src="images/chat_01.png" alt="ideaFlash AI avatar chat">
 
 </div>
 
+</section>
 
-<div class="section">
 
-<h2 data-lang="en">Product Versions</h2>
-<h2 data-lang="zh">产品版本</h2>
 
-<div data-lang="en">
+<!-- FEATURES -->
 
-<h3>Free</h3>
-<ul>
-<li>Notes</li>
-<li>AI avatar chat</li>
-<li>Energy limit</li>
-</ul>
+<section class="section">
 
-<h3>Pro</h3>
-<ul>
-<li>Notes</li>
-<li>AI avatar chat</li>
-<li>AI avatar tasks</li>
-</ul>
+<h2>Features</h2>
 
-<h3>Ultra</h3>
-<ul>
-<li>Notes</li>
-<li>AI avatar chat</li>
-<li>AI avatar tasks</li>
-<li>Avatar marketplace</li>
-<li>Unlimited energy</li>
-</ul>
+<div class="features">
 
+<div class="feature">
+<b>Personal Context Library</b>
+<p>Your notes automatically build a personalized context database.</p>
 </div>
 
-<div data-lang="zh">
+<div class="feature">
+<b>AI Avatar</b>
+<p>Your digital twin that understands your thinking and ideas.</p>
+</div>
 
-<h3>Free版</h3>
-<ul>
-<li>笔记</li>
-<li>AI 分身对话</li>
-<li>能量点限制</li>
-</ul>
+<div class="feature">
+<b>Idea to Product</b>
+<p>Transform notes and ideas into real digital products.</p>
+</div>
 
-<h3>Pro版</h3>
-<ul>
-<li>笔记</li>
-<li>AI 分身对话</li>
-<li>AI 分身工作能力</li>
-</ul>
-
-<h3>Ultra版</h3>
-<ul>
-<li>笔记</li>
-<li>AI 分身对话</li>
-<li>AI 分身工作能力</li>
-<li>分身发布</li>
-<li>分身雇佣</li>
-<li>无限能量点</li>
-</ul>
-
+<div class="feature">
+<b>Multi-Avatar Collaboration</b>
+<p>AI avatars collaborate to complete complex tasks.</p>
 </div>
 
 </div>
+
+</section>
+
+
+
+<!-- PRICING -->
+
+<section class="section">
+
+<h2>Pricing</h2>
+
+<div class="pricing">
+
+<div class="card">
+<b>Free</b>
+<p>Notes + AI avatar chat with limited energy points</p>
+</div>
+
+<div class="card">
+<b>Pro</b>
+<p>Notes + AI avatar chat and work capabilities</p>
+</div>
+
+<div class="card">
+<b>Ultra</b>
+<p>Unlimited energy points + avatar collaboration network</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 ideaFlash</p>
+
+<a href="privacy.html">Privacy Policy</a>
+<a href="terms.html">Terms of Service</a>
+
+</footer>
+
+
 
 </div>
 
 </body>
+
 </html>
