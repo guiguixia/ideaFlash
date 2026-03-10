@@ -1,128 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
-<title>IdeaFlash</title>
+<title>ideaFlash</title>
+
 <style>
+
 body{
-font-family: Arial, sans-serif;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
+margin:0;
+background:#fafafa;
+color:#222;
+line-height:1.6;
+}
+
+.container{
 max-width:900px;
 margin:auto;
-line-height:1.6;
-padding:20px;
+padding:60px 20px;
 }
-h1,h2{
-color:#333;
+
+.lang-switch{
+position:fixed;
+top:20px;
+right:30px;
 }
+
+button{
+padding:6px 12px;
+margin-left:5px;
+cursor:pointer;
+}
+
+h1{
+font-size:40px;
+}
+
+.hero{
+text-align:center;
+margin-bottom:50px;
+}
+
 .section{
-margin-top:40px;
+margin-top:50px;
 }
+
 </style>
+
+<script>
+
+function switchLang(lang){
+
+document.querySelectorAll("[data-lang]").forEach(el=>{
+
+if(el.dataset.lang === lang){
+el.style.display="block"
+}else{
+el.style.display="none"
+}
+
+})
+
+}
+
+window.onload=function(){
+switchLang("en")
+}
+
+</script>
+
 </head>
+
 
 <body>
 
-<h1>IdeaFlash</h1>
+<div class="lang-switch">
+<button onclick="switchLang('en')">EN</button>
+<button onclick="switchLang('zh')">中文</button>
+</div>
 
-<p>
-Turn every fleeting idea into reality.
+
+<div class="container">
+
+<div class="hero">
+
+<h1>ideaFlash</h1>
+
+<p data-lang="en">
+Turn every idea into reality
 </p>
 
-<div class="section">
-<h2>Product Vision</h2>
-
-<p>
-IdeaFlash is an AI-native platform designed to capture personal knowledge,
-build unique user context, and create a personal AI agent capable of working
-on behalf of the user.
-</p>
-
-<p>
-Over time, IdeaFlash builds a unique context for each user, enabling seamless
-interaction with different AI assistants and delivering truly personalized experiences.
-</p>
-
-<p>
-The long-term vision is to empower individuals to create their own AI agents
-and eventually operate a “one-person company” powered by AI.
+<p data-lang="zh">
+让每个 idea 成为现实
 </p>
 
 </div>
 
-<div class="section">
-<h2>Core Value Proposition</h2>
 
+<div class="section">
+
+<h2 data-lang="en">What is ideaFlash</h2>
+<h2 data-lang="zh">产品介绍</h2>
+
+<p data-lang="en">
+ideaFlash is an AI-native product designed around personal context.
+Your notes, ideas, learning records and thoughts gradually build a personal context library that evolves over time.
+</p>
+
+<p data-lang="zh">
+ideaFlash 是一款围绕个性化 context 构建的 AI 原生产品。
+用户的笔记、灵感、学习记录和思考会逐渐沉淀为一个不断成长的个性化 context 库。
+</p>
+
+</div>
+
+
+<div class="section">
+
+<h2 data-lang="en">Personal Context</h2>
+<h2 data-lang="zh">个性化 Context</h2>
+
+<p data-lang="en">
+Each user owns a personal context library built from notes, interactions and knowledge.
+This context continuously evolves through filtering, learning and reinforcement.
+</p>
+
+<p data-lang="zh">
+每个用户都会拥有一个属于自己的 context 库。
+这些内容来自笔记、用户与 AI 的交互以及长期积累的知识，并通过强化学习不断优化。
+</p>
+
+</div>
+
+
+<div class="section">
+
+<h2 data-lang="en">AI Avatar</h2>
+<h2 data-lang="zh">AI 分身</h2>
+
+<p data-lang="en">
+Your AI avatar is your digital twin.
+It understands your background, preferences and long-term goals, and can help you complete digital tasks.
+</p>
+
+<p data-lang="zh">
+AI 分身是用户在数字世界的第二个自己。
+它能够理解用户的背景、偏好和目标，并帮助完成各种数字世界的工作。
+</p>
+
+</div>
+
+
+<div class="section">
+
+<h2 data-lang="en">Product Versions</h2>
+<h2 data-lang="zh">产品版本</h2>
+
+<div data-lang="en">
+
+<h3>Free</h3>
 <ul>
-<li>Capture and organize personal knowledge and ideas</li>
-<li>Build long-term personalized AI context</li>
-<li>Create a personal AI agent that understands the user</li>
-<li>Enable collaboration between multiple AI agents</li>
-<li>Help individuals transform ideas into real projects</li>
+<li>Notes</li>
+<li>AI avatar chat</li>
+<li>Energy limit</li>
+</ul>
+
+<h3>Pro</h3>
+<ul>
+<li>Notes</li>
+<li>AI avatar chat</li>
+<li>AI avatar tasks</li>
+</ul>
+
+<h3>Ultra</h3>
+<ul>
+<li>Notes</li>
+<li>AI avatar chat</li>
+<li>AI avatar tasks</li>
+<li>Avatar marketplace</li>
+<li>Unlimited energy</li>
 </ul>
 
 </div>
 
-<div class="section">
-<h2>Product Roadmap</h2>
+<div data-lang="zh">
 
-<p>The product evolves through several stages:</p>
-
+<h3>Free版</h3>
 <ul>
-<li><b>Notes</b> – Capture personal knowledge and ideas</li>
-<li><b>AI Agent (Chat)</b> – AI that understands your context</li>
-<li><b>AI Agent (Work)</b> – AI capable of completing tasks</li>
-<li><b>Multi-Agent Collaboration</b> – AI agents collaborate across users</li>
-<li><b>Content & Ecosystem</b> – Distribution and discovery of AI-created work</li>
+<li>笔记</li>
+<li>AI 分身对话</li>
+<li>能量点限制</li>
+</ul>
+
+<h3>Pro版</h3>
+<ul>
+<li>笔记</li>
+<li>AI 分身对话</li>
+<li>AI 分身工作能力</li>
+</ul>
+
+<h3>Ultra版</h3>
+<ul>
+<li>笔记</li>
+<li>AI 分身对话</li>
+<li>AI 分身工作能力</li>
+<li>分身发布</li>
+<li>分身雇佣</li>
+<li>无限能量点</li>
 </ul>
 
 </div>
 
-<div class="section">
-<h2>Technology</h2>
-
-<ul>
-<li>Personalized context construction</li>
-<li>Context engineering</li>
-<li>Agent-to-Agent interaction (A2A)</li>
-<li>Personal AI agents</li>
-</ul>
-
 </div>
-
-<div class="section">
-<h2>Privacy Policy / 隐私政策</h2>
-
-<p>
-We respect user privacy and do not sell or share personal data. 
-User data belongs to the user and is only used to improve the service.
-</p>
-
-<p>
-我们尊重用户隐私，不会出售或共享用户数据。用户的数据资产始终属于用户本人，仅用于改进产品服务。
-</p>
-
-</div>
-
-<div class="section">
-<h2>Terms of Service / 服务条款</h2>
-
-<p>
-This product is provided as-is to help users improve productivity and
-develop AI-assisted workflows.
-</p>
-
-<p>
-本产品按“现状”提供，旨在帮助用户提升效率并探索 AI 辅助工作方式。
-</p>
-
-</div>
-
-<div class="section">
-<h2>Contact</h2>
-
-<p>
-Email: wangzhongcheng957@gmail.com
-</p>
 
 </div>
 
